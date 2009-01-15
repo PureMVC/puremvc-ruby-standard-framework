@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: notification.rb</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>notification.rb</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>src/org/puremvc/ruby/patterns/observer/notification.rb
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Mon Dec 29 19:58:08 -0600 2008</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+PureMVC does not rely upon underlying event models such as the one provided
+with Flash.
+</p>
+<p>
+The <a href="../../../../../../../classes/Observer.html">Observer</a>
+Pattern as implemented within PureMVC exists to support event-driven
+communication between the application and the actors of the MVC triad.
+</p>
+<p>
+Notifications are not meant to be a replacement for Events. Generally, <a
+href="../../../../../../../classes/Mediator.html">Mediator</a> implementors
+place event listeners on their view components, which they then handle in
+the usual way. This may lead to the broadcast of Notifications to trigger
+Commands or to communicate with other Mediators. <a
+href="../../../../../../../classes/Proxy.html">Proxy</a> and Command
+instances communicate with each other and Mediators by broadcasting
+Notifications.
+</p>
+<p>
+A key difference between UI Events and PureMVC Notifications is that Events
+follow the &#8216;Chain of Responsibility&#8217; pattern,
+&#8216;bubbling&#8217; up the display hierarchy until some parent component
+handles the Event, while PureMVC Notifications follow a
+&#8216;Publish/Subscribe&#8217; pattern. PureMVC classes need not be
+related to each other in a parent/child relationship in order to
+communicate with one another using Notifications.
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

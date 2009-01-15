@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">View</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/src/org/puremvc/ruby/core/view_rb.html">
+                src/org/puremvc/ruby/core/view.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+In PureMVC, the <a href="View.html">View</a> class assumes these
+responsibilities:
+</p>
+<ul>
+<li>Maintain a cache of IMediator instances.
+
+</li>
+<li>Provide methods for registering, retrieving, and removing Mediators.
+
+</li>
+<li>Notifiying Mediators when they are registered or removed.
+
+</li>
+<li>Managing the observer lists for each <a
+href="Notification.html">Notification</a> in the application.
+
+</li>
+<li>Providing a method for attaching Observers to an <a
+href="Notification.html">Notification</a>&#8216;s observer list.
+
+</li>
+<li>Providing a method for broadcasting an <a
+href="Notification.html">Notification</a>.
+
+</li>
+<li>Notifying the Observers of a given <a
+href="Notification.html">Notification</a> when it broadcast.
+
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000059">has_mediator?</a>&nbsp;&nbsp;
+      <a href="#M000052">initialize_view</a>&nbsp;&nbsp;
+      <a href="#M000051">new</a>&nbsp;&nbsp;
+      <a href="#M000054">notify_observers</a>&nbsp;&nbsp;
+      <a href="#M000056">register_mediator</a>&nbsp;&nbsp;
+      <a href="#M000053">register_observer</a>&nbsp;&nbsp;
+      <a href="#M000058">remove_mediator</a>&nbsp;&nbsp;
+      <a href="#M000055">remove_observer</a>&nbsp;&nbsp;
+      <a href="#M000057">retrieve_mediator</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name">Singleton</span>
+      </div>
+    </div>
+
+    <div id="section">
+
+
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">mediator_map</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">observer_map</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000051" class="method-detail">
+        <a name="M000051"></a>
+
+        <div class="method-heading">
+          <a href="View.src/M000051.html" target="Code" class="method-signature"
+            onclick="popupCode('View.src/M000051.html');return false;">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This <a href="View.html">View</a> implementation is a Singleton, so you
+should not call the constructor directly, but instead call the static
+Singleton Factory method View.instance.
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000059" class="method-detail">
+        <a name="M000059"></a>
+
+        <div class="method-heading">
+          <a href="View.src/M000059.html" target="Code" class="method-signature"
+            onclick="popupCode('View.src/M000059.html');return false;">
+          <span class="method-name">has_mediator?</span><span class="method-args">(mediator_name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Check if a <a href="Mediator.html">Mediator</a> is registered or not.
+</p>
+<p>
+returns whether a <a href="Mediator.html">Mediator</a> is registered with
+the given name.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000052" class="method-detail">
+        <a name="M000052"></a>
+
+        <div class="method-heading">
+          <a href="View.src/M000052.html" target="Code" class="method-signature"
+            onclick="popupCode('View.src/M000052.html');return false;">
+          <span class="method-name">initialize_view</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Initialize the Singleton <a href="View.html">View</a> instance.
+</p>
+<p>
+Called automatically by the constructor, this is your opportunity to
+initialize the Singleton instance in your subclass without overriding the
+constructor
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000054" class="method-detail">
+        <a name="M000054"></a>
+
+        <div class="method-heading">
+          <a href="View.src/M000054.html" target="Code" class="method-signature"
+            onclick="popupCode('View.src/M000054.html');return false;">
+          <span class="method-name">notify_observers</span><span class="method-args">(notification)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Notify the Observers for a particular <a
+href="Notification.html">Notification</a>.
+</p>
+<p>
+All previously attached Observers for this <a
+href="Notification.html">Notification</a>&#8216;s list are notified and are
+passed a reference to the <a href="Notification.html">Notification</a> in
+the order in which they were registered.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000056" class="method-detail">
+        <a name="M000056"></a>
+
+        <div class="method-heading">
+          <a href="View.src/M000056.html" target="Code" class="method-signature"
+            onclick="popupCode('View.src/M000056.html');return false;">
+          <span class="method-name">register_mediator</span><span class="method-args">(mediator)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Register a <a href="Mediator.html">Mediator</a> instance with the <a
+href="View.html">View</a>.
+</p>
+<p>
+Registers the <a href="Mediator.html">Mediator</a> so that it can be
+retrieved by name and further interrogates the mediator for its <a
+href="Notification.html">Notification</a> interests.
+</p>
+<p>
+If the mediator returns any Notifiation name to be notified about, an <a
+href="Observer.html">Observer</a> is created encapsulating the <a
+href="Mediator.html">Mediator</a> instance&#8216;s handle_notification
+method and registering it as an <a href="Observer.html">Observer</a> for
+all Notifications the <a href="Mediator.html">Mediator</a> is interested
+in.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000053" class="method-detail">
+        <a name="M000053"></a>
+
+        <div class="method-heading">
+          <a href="View.src/M000053.html" target="Code" class="method-signature"
+            onclick="popupCode('View.src/M000053.html');return false;">
+          <span class="method-name">register_observer</span><span class="method-args">(notification_name, observer)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Register an <a href="Observer.html">Observer</a> to be notified of
+Notifications with a given name.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000058" class="method-detail">
+        <a name="M000058"></a>
+
+        <div class="method-heading">
+          <a href="View.src/M000058.html" target="Code" class="method-signature"
+            onclick="popupCode('View.src/M000058.html');return false;">
+          <span class="method-name">remove_mediator</span><span class="method-args">(mediator_name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Remove a <a href="Mediator.html">Mediator</a> from the <a
+href="View.html">View</a>.
+</p>
+<p>
+returns the <a href="Mediator.html">Mediator</a> that was removed.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000055" class="method-detail">
+        <a name="M000055"></a>
+
+        <div class="method-heading">
+          <a href="View.src/M000055.html" target="Code" class="method-signature"
+            onclick="popupCode('View.src/M000055.html');return false;">
+          <span class="method-name">remove_observer</span><span class="method-args">(notification_name, observer)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Remove the observer for a given notify context from an observer list for a
+given <a href="Notification.html">Notification</a> name.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000057" class="method-detail">
+        <a name="M000057"></a>
+
+        <div class="method-heading">
+          <a href="View.src/M000057.html" target="Code" class="method-signature"
+            onclick="popupCode('View.src/M000057.html');return false;">
+          <span class="method-name">retrieve_mediator</span><span class="method-args">(mediator_name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Retrieve a mediator from the <a href="View.html">View</a>.
+</p>
+<p>
+returns the previously registered <a href="Mediator.html">Mediator</a> with
+the given name.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
