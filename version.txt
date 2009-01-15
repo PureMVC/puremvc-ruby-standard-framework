@@ -9,4 +9,4 @@ Release Date: 1/14/09
      License: Creative Commons Attribution 3.0 Unported License
 --------------------------------------------------------------------------
 
-1.0 - Initial upload of ported code, equivalent to AS3 Standard Version 2.0.3.
+1.0 - Initial upload of ported code, equivalent to AS3 Standard Version 2.0.4.
