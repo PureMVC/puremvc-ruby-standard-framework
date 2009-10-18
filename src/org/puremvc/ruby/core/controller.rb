@@ -12,8 +12,6 @@
 
 
 class Controller
-  attr_accessor :command_map, :view
-  
   include Singleton
   
   # This Controller implementation is a Singleton, 
@@ -22,6 +20,7 @@ class Controller
   # Factory method Controller.instance
   def initialize
     @command_map = {}
+    @view = nil
     initialize_controller
   end
 

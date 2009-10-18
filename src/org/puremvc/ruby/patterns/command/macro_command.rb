@@ -7,9 +7,7 @@
 # Unlike SimpleCommand, your subclass should not override execute, but instead, 
 # should override the initialize_macro_command method, calling add_sub_command 
 # once for each SubCommand to be executed.
-class MacroCommand
-  attr_accessor :sub_commands
-  
+class MacroCommand < Notifier
   
   # You should not need to define a constructor, 
   # instead, override the initialize_macro_command method.

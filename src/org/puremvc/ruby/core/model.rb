@@ -11,8 +11,6 @@
 class Model
   
   include Singleton
-  attr_accessor :proxy_map
-
   
   # This Model implementation is a Singleton, so you can not call the constructor 
   # directly, but instead call the static Singleton Factory method Model.instance

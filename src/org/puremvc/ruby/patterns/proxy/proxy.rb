@@ -8,9 +8,10 @@
 # remote services to save or retrieve data, in which case, we adopt an asyncronous 
 # idiom; setting data (or calling a method) on the Proxy and listening for a 
 # Notification to be sent when the Proxy has retrieved the data from the service.
-class Proxy
+class Proxy < Notifier
   
-  attr_accessor :name, :data
+  attr_accessor :data
+  attr_reader :name
   def initialize(proxy_name, data=nil)
     @name = proxy_name
     @data = data

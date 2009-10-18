@@ -3,7 +3,7 @@ class Mediator < Notifier
   # The name of the Mediator
   # Typically, a Mediator will be written to serve one specific control or group
   # controls and so,will not have a need to be dynamically named.
-  attr_accessor :name
+  attr_reader :name
   attr_accessor :view
   
   def initialize(name="Mediator", view=nil )

@@ -7,11 +7,12 @@
 class Facade
   include Singleton
   
-  attr_accessor :model, :view, :controller
-  
   # This Facade implementation is a Singleton, so you can not call the constructor 
   # directly, but instead call the static Singleton Factory method Facade.instance
   def initialize
+    @model = nil
+    @view = nil
+    @controller = nil
     initialize_facade
   end
   

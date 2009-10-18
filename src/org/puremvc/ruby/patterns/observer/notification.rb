@@ -16,7 +16,8 @@
 # parent/child relationship in order to communicate with one another using Notifications.
 class Notification
   
-  attr_accessor :name, :body, :type
+  attr_accessor :body, :type
+  attr_reader :name
   
   def initialize(name=nil, body=nil, type=nil)
     @name = name

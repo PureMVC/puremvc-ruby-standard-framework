@@ -10,9 +10,6 @@
 class View
   include Singleton
   
-  attr_accessor :mediator_map, :observer_map
-  
-  
   # This View implementation is a Singleton, so you should not call the constructor 
   # directly, but instead call the static Singleton Factory method View.instance.
   def initialize
