@@ -18,7 +18,7 @@ class Observer
   
   # Notify the interested object.
   def notify_observer(notification)
-    @context.send(@notify, notification)
+    @context.method(@notify).call(notification)
   end
   
   # Compare an object to the notification context.
