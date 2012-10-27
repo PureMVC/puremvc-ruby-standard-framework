@@ -1,12 +1,9 @@
-﻿PureMVC Port to Ruby by Jake Dempsey <jake.dempsey@puremvc.org>
-PureMVC - Copyright(c) 2006-2008 Futurescale, Inc., Some rights reserved.
+PureMVC Standard Framework for Ruby (Ported)
 --------------------------------------------------------------------------
 Release Date: 1/14/09
     Platform: Ruby 
      Version: 1 
     Revision: 0
-     Authors: Jake Dempsey <jake.dempsey@puremvc.org>
-     License: Creative Commons Attribution 3.0 Unported License
+      Author: Jake Dempsey <jake.dempsey@puremvc.org>
 --------------------------------------------------------------------------
-
 1.0 - Initial upload of ported code, equivalent to AS3 Standard Version 2.0.4.
