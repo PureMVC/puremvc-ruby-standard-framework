@@ -1,7 +1,7 @@
 ## [PureMVC](http://puremvc.github.com/) Ruby Standard Framework
 PureMVC is a lightweight framework for creating applications based upon the classic [Model-View-Controller](http://en.wikipedia.org/wiki/Model-view-controller) design meta-pattern. This is a Ruby port of the [AS3 reference implementation of the Standard Version](https://github.com/PureMVC/puremvc-as3-standard-framework/wiki). 
 
-* [API Docs](http://darkstar.puremvc.org/content_header.html?url=http://puremvc.org/pages/docs/Ruby/standard/&desc=PureMVC%20API%20Docs:%20PureMVC%20Standard%20for%20Ruby)
+* [API Docs](http://puremvc.org/pages/docs/Ruby/standard/)
 * [Unit Tests](https://github.com/PureMVC/puremvc-ruby-standard-unittests/wiki)
 * [Discussion](http://forums.puremvc.org/index.php?board=78.0)
 * [Overview Presentation](http://puremvc.tv/#P100)
